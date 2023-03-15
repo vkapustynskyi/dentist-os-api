@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dentist-os-dev
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+  liquibase:
+    change-log: db/master.xml
+
+authentication.jwt:
+  secretKey: 9z$C&F)J@NcQfTjWnZr4u7x!A%D*G-Ka
+  accessTokenExpirationInMillis: 259200000
+#  tokenExpirationInMillis: ${JWT_ACCESS_TOKEN_EXPIRATION}
+#  secretKey: ${AUTHENTICATION_JWT_SECRET_KEY}
